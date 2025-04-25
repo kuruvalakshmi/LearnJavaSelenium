@@ -41,6 +41,8 @@ public class PvrCinema {
 	//print the title
 	 String Title = driver.getTitle();
 	 System.out.println("Title of current page "+ Title);
+        //close the browser
+          driver.close();
 
 	
 	 
