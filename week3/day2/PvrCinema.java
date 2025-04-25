@@ -18,8 +18,6 @@ public class PvrCinema {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(1000);
-	//	driver.findElement(By.xpath("//input[@placeholder='Search for city']")).click();
-	    // driver.findElement(By.xpath("//h6[text()='Chennai']")).click();
 	 driver.findElement(By.xpath("//span[text()='Cinema']")).click();
 	 driver.findElement(By.xpath("//span[contains(text(),'Select Cinema')]")).click();
 	 Thread.sleep(1000);
@@ -31,19 +29,20 @@ public class PvrCinema {
 	 driver.findElement(By.xpath("//ul[@class='p-dropdown-items']")).click();
 	 driver.findElement(By.xpath("//button[@type='submit']")).click();
 	 
-    driver.findElement(By.xpath("//button[text()='Accept']")).click();
+        driver.findElement(By.xpath("//button[text()='Accept']")).click();
 	 
 	 driver.findElement(By.xpath("//td[@class='seats-col']/span[@id='CL.CLUB|J:18']")).click();
 	 //click on proceed button
 	 driver.findElement(By.xpath("//button[text()='Proceed']")).click();
 	// find the seat info
-	String seatInfo = driver.findElement(By.xpath("//div[@class='seat-number']")).getText();
-	 System.out.println(seatInfo);
-	 //print ticketprice
-	 String ticketprice = driver.findElement(By.xpath("//div[@class='ticket-price']/p")).getText();
-	 System.out.println(ticketprice);
+          driver.findElement(By.xpath("//div[@class='seat-number']")).getText();
 	 //print grandtotal
-	 
+          driver.findElement(By.xpath("//body[@class='pvrTheme sweetalert-overflow-hidden']")).getText();
+	//print the title
+	 String Title = driver.getTitle();
+	 System.out.println("Title of current page "+ Title);
+
+	
 	 
 	 
 	 
